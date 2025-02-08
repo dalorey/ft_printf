@@ -6,7 +6,7 @@
 #    By: dlorenzo <dlorenzo@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 16:19:02 by dlorenzo          #+#    #+#              #
-#    Updated: 2025/02/07 22:33:23 by dlorenzo         ###   ########.fr        #
+#    Updated: 2025/02/08 20:06:50 by dlorenzo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ INCLUDES = -I$(LIBFT_DIR)
 # Source Files
 SRC = ft_printf.c ft_printf_utils.c
 OBJ = $(SRC:.c=.o)
+LIBFT_OBJ = $(LIBFT_DIR)/*.o
 
 # Test environment
 TEST = test
@@ -40,7 +41,7 @@ $(LIBFT):
 	make -C $(LIBFT_DIR) # Run make inside Libft folder
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(AR) $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ) $(LIBFT_OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -I. -c $< -o $@

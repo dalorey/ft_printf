@@ -6,7 +6,7 @@
 /*   By: dlorenzo <dlorenzo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:00:13 by dlorenzo          #+#    #+#             */
-/*   Updated: 2025/02/07 20:11:58 by dlorenzo         ###   ########.fr       */
+/*   Updated: 2025/02/08 22:45:31 by dlorenzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@
 # include <stdlib.h> // For malloc, free;
 # include "Libft/libft.h"
 
-int	ft_printf(const char *data, ...);
-int	ft_num_len(int num);
+int		ft_printf(const char *data, ...);
+int		ft_num_len(int num);
+int		ft_unsigned_num_len(unsigned int num);
+int		ft_hex_len(unsigned long long num);
+void	ft_putnbr_unsigned_fd(unsigned int n, int fd);
+void	ft_putnbr_base_fd(unsigned long long n, char *base, int fd);
 
 #endif
