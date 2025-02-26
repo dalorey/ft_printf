@@ -2,17 +2,16 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc build current program",
-            "command": "/bin/gcc",
+            "label": "C/C++: gcc build active file",
+            "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "ft_printf.c",
-                "ft_printf_utils.c",                
                 "test.c",
                 "-o",
                 "${fileDirname}/test",
-                "-L${fileDirname}/Libft",
+                "-L${fileDirname}/libft",
                 "-lft",
                 "-L.",
                 "-lftprintf"
